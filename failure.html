@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Failed | Hotel Tezor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="hotel-title">HOTEL TEZOR</h1>
+        <p>Reservation Status</p>
+        <nav><a href="index.html">Book a Room</a> <a href="admin.html">Admin</a></nav>
+    </header>
+
+    <div class="status-wrapper">
+        <div class="status-card failure">
+
+            <div class="icon-circle error">✕</div>
+
+            <h2>Booking Not Completed</h2>
+
+            <!-- Later: the servlet sets the exact reason (room taken, invalid dates, too many guests...) -->
+            <p class="highlight-text error-text">Sorry, this room is no longer available for your dates.</p>
+
+            <p class="sub-text">Another guest may have booked it just before you. Please search again to see current availability.</p>
+
+            <div class="btn-group">
+                <a href="index.html" class="btn-primary-nav">Search Again</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed | Hotel Tezor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="hotel-title">HOTEL TEZOR</h1>
+        <p>Reservation Confirmation Hub</p>
+        <nav><a href="index.html">Book a Room</a> <a href="admin.html">Admin</a></nav>
+    </header>
+
+    <div class="status-wrapper">
+        <div class="status-card success">
+
+            <div class="icon-circle success">✓</div>
+
+            <h2>Booking Registered!</h2>
+            <p class="highlight-text">We are waiting for your arrival!</p>
+
+            <!-- Later: filled with real values from the servlet -->
+            <div class="summary-box vertical">
+                <span><strong>Booking Code:</strong> TZBK112223</span>
+                <span><strong>Customer Code:</strong> TZID1234</span>
+                <span><strong>Room:</strong> 123</span>
+                <span><strong>Stay:</strong> 2026-11-04 to 2026-11-06</span>
+                <span><strong>Amount Due:</strong> ₹5,000.00 (Payment Pending)</span>
+            </div>
+
+            <p class="sub-text">Please keep your booking code safe. You will need it at check-in.</p>
+
+            <div class="btn-group">
+                <a href="index.html" class="btn-secondary">New Booking</a>
+                <a href="admin.html" class="btn-primary-nav">View Admin Log</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

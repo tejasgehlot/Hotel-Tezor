@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Tezor | Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="hotel-title">TEZOR MANAGEMENT</h1>
+        <p>Internal Operations & Reservation Control Center</p>
+        <nav><a href="index.html">Book a Room</a> <a href="admin.html">Admin</a></nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-grid">
+
+            <!-- All Bookings (later: bookings JOIN customers JOIN rooms) -->
+            <div class="table-section">
+                <h2>All Bookings</h2>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Customer</th>
+                                <th>Phone</th>
+                                <th>Room</th>
+                                <th>Check In</th>
+                                <th>Check Out</th>
+                                <th>Guests</th>
+                                <th>Amount</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>TZBK112223</strong></td>
+                                <td>Harry Yasher</td>
+                                <td>7878787878</td>
+                                <td>123</td>
+                                <td>2026-11-01</td>
+                                <td>2026-11-03</td>
+                                <td>2</td>
+                                <td>₹5,000.00</td>
+                                <td><span class="badge pending">PENDING</span></td>
+                                <td><span class="badge confirmed">CONFIRMED</span></td>
+                                <td>
+                                    <form action="cancel-booking" method="POST">
+                                        <input type="hidden" name="booking_id" value="1">
+                                        <button type="submit" class="btn-danger">Cancel</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>TZBK112255</strong></td>
+                                <td>Mitchell York</td>
+                                <td>9988776655</td>
+                                <td>223</td>
+                                <td>2026-11-05</td>
+                                <td>2026-11-07</td>
+                                <td>4</td>
+                                <td>₹12,000.00</td>
+                                <td><span class="badge paid">PAID</span></td>
+                                <td><span class="badge confirmed">CONFIRMED</span></td>
+                                <td>
+                                    <form action="cancel-booking" method="POST">
+                                        <input type="hidden" name="booking_id" value="2">
+                                        <button type="submit" class="btn-danger">Cancel</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>TZBK112206</strong></td>
+                                <td>Fexil Mumunti</td>
+                                <td>6574839302</td>
+                                <td>123</td>
+                                <td>2026-11-10</td>
+                                <td>2026-11-12</td>
+                                <td>1</td>
+                                <td>₹5,000.00</td>
+                                <td><span class="badge pending">PENDING</span></td>
+                                <td><span class="badge confirmed">CONFIRMED</span></td>
+                                <td>
+                                    <form action="cancel-booking" method="POST">
+                                        <input type="hidden" name="booking_id" value="3">
+                                        <button type="submit" class="btn-danger">Cancel</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <!-- A cancelled booking shows this badge and NO cancel button:
+                            <td><span class="badge cancelled">CANCELLED</span></td>
+                            <td>-</td> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rooms -->
+            <div class="table-section">
+                <h2>Rooms</h2>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Room ID</th>
+                                <th>Room No</th>
+                                <th>Type</th>
+                                <th>Capacity</th>
+                                <th>Price Per Night</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>123</td><td>Double</td><td>2 Guests</td><td>₹2,500.00</td></tr>
+                            <tr><td>2</td><td>223</td><td>Suite</td><td>4 Guests</td><td>₹6,000.00</td></tr>
+                            <tr><td>3</td><td>224</td><td>Single</td><td>1 Guest</td><td>₹1,500.00</td></tr>
+                            <tr><td>4</td><td>528</td><td>Double</td><td>2 Guests</td><td>₹2,500.00</td></tr>
+                            <tr><td>5</td><td>529</td><td>Suite</td><td>4 Guests</td><td>₹6,000.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Customers -->
+            <div class="table-section">
+                <h2>Customers</h2>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>TZID1234</td><td>Harry Yasher</td><td>7878787878</td><td>harry@example.com</td></tr>
+                            <tr><td>2</td><td>TZID9465</td><td>Mitchell York</td><td>9988776655</td><td>mitchell@example.com</td></tr>
+                            <tr><td>3</td><td>TZID0096</td><td>Fexil Mumunti</td><td>6574839302</td><td>fexil@example.com</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

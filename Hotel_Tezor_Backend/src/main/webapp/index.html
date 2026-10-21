@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Tezor | Check Availability</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="hotel-title" style="color: #333; font-family: 'Orbitron', sans-serif;">HOTEL TEZOR</h1>
+        <p>Experience Premium Hospitality & Comfort</p>
+        <nav><a href="index.html">Book a Room</a> <a href="admin.html">Admin</a></nav>
+    </header>
+
+    <div class="container">
+        <div class="booking-card">
+            <h2 class="card-title">Step 1: Check Availability</h2>
+
+            <!-- GET: these are search filters, nothing is saved yet -->
+            <form action="search-rooms" method="GET">
+                <div class="form-grid">
+                    <div class="form-group">    
+                        <label for="check_in">Check-In Date</label>
+                        <input type="date" id="check_in" name="check_in" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check_out">Check-Out Date</label>
+                        <input type="date" id="check_out" name="check_out" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" name="guests" min="1" max="4" value="2" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Search Available Rooms</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

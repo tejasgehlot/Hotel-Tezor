@@ -1,0 +1,40 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+.classpath
+.project
+.settings/
+bin/
